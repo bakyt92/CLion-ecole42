@@ -26,10 +26,10 @@ int main (void)
     n = 20;
 
     printf("\n *****FT_BZERO****** \n");
-    printf("Результат ft_bzero1: %s", s1);
+    printf("Результат ft_bzero1 : %s", s1);
     printf("\n  \n");
     ft_bzero(s1, n);
-    printf("Результат ft_bzero2: %s", s1);
+    printf("Результат ft_bzero2 : %s", s1);
     printf("\n");
     return(0);
 }
