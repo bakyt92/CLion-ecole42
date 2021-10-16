@@ -44,7 +44,7 @@ int main (void)
     char s1[] = "He5398ll423no";
     char s2[] = "12345";
     size_t n;
-    n = 230;
+    n = 120;
 //    printf("Результат0: %s", s1);
 //    size_t m = strlcat(s1, s2, n);
 //    printf("Результат1: %d", m);
