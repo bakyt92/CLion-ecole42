@@ -1,22 +1,20 @@
-//#include <stdio.h>
-//#include <unistd.h>
-//#include <stdlib.h>
-//
-//void *ft_memset(void *s, int c, size_t n)
-//{
-//    unsigned char *l;
-//    l = (unsigned char*)s;
-//    size_t x;
-//    x = 0;
-//    while (x < n)
-//    {
-//        *l = c;
-//        l++;
-//        x++;
-//    }
-//    return (s);
-//}
-//
+#include "libft.h"
+
+void *ft_memset(void *s, int c, size_t n)
+{
+    unsigned char *l;
+    l = (unsigned char*)s;
+    size_t x;
+    x = 0;
+    while (x < n)
+    {
+        *l = c;
+        l++;
+        x++;
+    }
+    return (s);
+}
+
 //int main (void)
 //{
 //    void *s1 = "He5398ll423no";
