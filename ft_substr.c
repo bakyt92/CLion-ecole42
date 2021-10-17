@@ -20,6 +20,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		}
 		++pos;
 		dest[i] = '\0';
-		return(dest);
+
 	}
+	return(dest);
 }
