@@ -6,18 +6,15 @@
 #    By: ufitzhug <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/10 15:48:42 by ufitzhug          #+#    #+#              #
-#    Updated: 2021/10/10 17:30:30 by ufitzhug         ###   ########.fr        #
+#    Updated: 2021/10/17 17:09:29 by ufitzhug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = ft_atoi.c /
-	ft_bzero.c /
-	ft_calloc.c /
-	ft_memset.c
+SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_memset.c ft_strlen.c
 
-B_SRC = ft_substr.c
+B_SRC = ft_lstnew.c
 #
 HEADER = libft.h
 OBJ = $(patsubst %.c, %.o, $(SRC))
