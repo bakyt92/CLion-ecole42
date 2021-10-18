@@ -17,18 +17,3 @@ int ft_memcmp (const void *arr1, const void *arr2, size_t n)
     }
     return (0);
 }
-
-//
-//int main (void)
-//{
-//    char s1[] = "He5398ll423no";
-//    const char s2[] = "dadr3Hd5398ll423no";
-//
-//    size_t n;
-//    n = 3;
-//
-//    printf("Результат1: %s", s1);
-//    printf("\n Newline");
-//    printf("Результат2: %s", ft_memcpy(s1, s2, n));
-//    return(0);
-//}
