@@ -13,7 +13,8 @@
 NAME = libft.a
 
 SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_memset.c ft_strlen.c \
-ft_substr.c
+ft_substr.c ft_strjoin.c ft_isalnum.c ft_isalpha.c ft_memcpy.c \
+ft_memcmp.c
 
 
 B_SRC = ft_lstnew.c
