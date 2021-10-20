@@ -1,17 +1,15 @@
-//#include <stdio.h>
-//#include <unistd.h>
-//#include <string.h>
-//
-//char *ft_strchr(const char *s, int ch)
-//{
-//    while (*s != ch)
-//    {
-//        if (*s == '\0')
-//            return (NULL);
-//        s++;
-//    }
-//    return(s);
-//}
+#include "libft.h"
+
+char *ft_strchr(const char *s, int ch)
+{
+    while (*s != ch)
+    {
+        if (*s == '\0')
+            return (NULL);
+        s++;
+    }
+    return((char *)s);
+}
 //
 //int main (void)
 //{
