@@ -1,16 +1,5 @@
 #include "libft.h"
 
-static int ft_znak(const char *str, int i)
-{
-	if (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			return(-1);
-		++i;
-	}
-	return (1);
-}
-
 static int ft_subatoi (const char *str, int i, int znak)
 {
 	int res;
@@ -38,14 +27,19 @@ static int ft_subatoi (const char *str, int i, int znak)
 int ft_atoi(const char *str)
 {
 	int i;
-    int res;
-    int znak;
+	int res;
+	int znak;
 
-    i = 0;
-    while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
-        ++i;
-    znak = ft_znak(str, i);
-    i += 1;
-    res = ft_subatoi (str, i, znak);
-    return (res);
+	i = 0;
+	znak = 1;
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+		++i;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			znak = -1;
+		++i;
+	}
+	res = ft_subatoi (str, i, znak);
+	return (res);
 }
