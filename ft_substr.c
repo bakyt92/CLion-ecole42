@@ -8,19 +8,22 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	pos = 0;
-	dest = (char*)malloc(sizeof(char*) * len + 1);
+	if(s == NULL)
+		return (NULL);
+	if (ft_strlen(s) <= (size_t) start)
+		return (ft_strdup(""));
+	dest = (char*)malloc(sizeof(char) * (len + 1));
 	if (dest == NULL)
 		return (NULL);
 	while (*s != '\0' && pos <= (len + start))
 	{
-		if (pos >= start && i <= len)
+		if (pos >= start && i < len)
 		{
 			dest[i] = s[pos];
 			++i;
 		}
 		++pos;
-		dest[i] = '\0';
-
 	}
+	dest[i] = '\0';
 	return(dest);
 }

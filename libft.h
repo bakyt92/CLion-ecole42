@@ -12,7 +12,7 @@ int	ft_isprint(char ch);
 int ft_atoi(const char *str);
 void ft_bzero(void *s, size_t n);
 void *ft_calloc(size_t count, size_t size);
-int	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 void *ft_memset(void *s, int c, size_t n);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
