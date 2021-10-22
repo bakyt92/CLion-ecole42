@@ -25,5 +25,9 @@ void *ft_memcpy(void *dest, const void *src, size_t n);
 int ft_memcmp (const void *arr1, const void *arr2, size_t n);
 char *ft_strdup(const char *s);
 void *ft_memmove(void *dst, const void *src, size_t len);
+void ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(char *s, int fd);
+void ft_putendl_fd(char *s, int fd);
+void ft_putnbr_fd(int n, int fd);
 
 #endif
