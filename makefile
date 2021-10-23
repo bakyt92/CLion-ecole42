@@ -20,7 +20,7 @@ ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 ft_toupper.c ft_tolower.c ft_strnstr.c ft_strlcat.c ft_strlcpy.c
 
 
-B_SRC = ft_lstnew.c
+B_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
 #
 HEADER = libft.h
 OBJ = $(patsubst %.c, %.o, $(SRC))
