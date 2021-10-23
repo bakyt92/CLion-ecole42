@@ -1,24 +1,22 @@
-//#include <stdio.h>
-//#include <unistd.h>
-//#include <stdlib.h>
-//
-//size_t ft_strlcpy(char *dst, const char *src, size_t n)
-//{
-//    size_t count;
-//    size_t x;
-//    count = 0;
-//    while (src[count] != '\0')
-//        ++count;
-//
-//    x = 0;
-//    while (src[x] != '\0' && (n - 1) > x)
-//    {
-//        dst[x] = src[x];
-//        ++x;
-//    }
-//    dst[x] = '\0';
-//    return (count);
-//}
+#include "libft.h"
+
+size_t ft_strlcpy(char *dst, const char *src, size_t n)
+{
+    size_t count;
+    size_t x;
+    count = 0;
+    while (src[count] != '\0')
+        ++count;
+
+    x = 0;
+    while (src[x] != '\0' && (n - 1) > x)
+    {
+        dst[x] = src[x];
+        ++x;
+    }
+    dst[x] = '\0';
+    return (count);
+}
 //
 //int main (void)
 //{

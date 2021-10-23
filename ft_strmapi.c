@@ -6,10 +6,11 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     unsigned int i;
     unsigned int number;
 
+    if (!s || !f)
+    	return (NULL);
     number = ft_strlen((char*)s);
     i = 0;
-    if (!s || !f)
-        return (NULL);
+
     str = (char *) malloc (sizeof (char) * (number + 1));
     if (!str)
     	return (NULL);
