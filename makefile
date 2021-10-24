@@ -6,7 +6,7 @@
 #    By: ufitzhug <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/10 15:48:42 by ufitzhug          #+#    #+#              #
-#    Updated: 2021/10/17 17:09:29 by ufitzhug         ###   ########.fr        #
+#    Updated: 2021/10/24 22:46:30 by ufitzhug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ ft_substr.c ft_strjoin.c ft_isalnum.c ft_isalpha.c ft_memcpy.c \
 ft_memcmp.c ft_strdup.c ft_memmove.c ft_isdigit.c ft_isascii.c \
 ft_isprint.c ft_strtrim.c ft_strchr.c ft_striteri.c ft_strmapi.c \
 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-ft_toupper.c ft_tolower.c ft_strnstr.c ft_strlcat.c ft_strlcpy.c
+ft_toupper.c ft_tolower.c ft_strnstr.c ft_strlcat.c ft_strlcpy.c \
+ft_itoa.c
 
 
 B_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
@@ -39,8 +40,11 @@ $(NAME) : $(OBJ) $(HEADER)
 %.o : %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus : 
-	@make OBJ="$(B_OBJ)" all
+#bonus : 
+#	@make OBJ="$(B_OBJ)" all
+ 
+bonus : $(B_OBJ) $(HEADER)
+	ar rcs $(NAME) $?
 
 clean : 
 	@rm -f $(OBJ) $(B_OBJ)

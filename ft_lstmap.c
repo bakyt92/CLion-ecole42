@@ -7,12 +7,12 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst || !f)
 		return (NULL);
-	if (!(elem1 = ft_lstnew(f(lst->content))))
+    elem1 = ft_lstnew(f(lst->content));
+	if (!elem1)
 	{
 		ft_lstclear(&lst, del);
 		return (NULL);
 	}
-	elem1 = ft_lstnew(f(lst->content));
 	lst = lst->next;
 	while (lst)
 	{

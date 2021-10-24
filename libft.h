@@ -23,6 +23,7 @@ char *ft_strchr(const char *s, int ch);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
+char *ft_itoa(int n);
 
 void *ft_memcpy(void *dest, const void *src, size_t n);
 int ft_memcmp (const void *arr1, const void *arr2, size_t n);
