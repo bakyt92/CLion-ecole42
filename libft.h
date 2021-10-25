@@ -35,7 +35,8 @@ void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
 char *ft_strnstr(char *first, const char *find, size_t len);
 size_t ft_strlcpy(char *dst, const char *src, size_t n);
-
+char *ft_strrchr(const char *s, int c);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 
 typedef struct s_list
 {
