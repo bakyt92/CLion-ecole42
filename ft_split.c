@@ -13,6 +13,7 @@ static int ft_num_words(char *s, char c)
             j++;
         i++;
     }
+    return (i);
 }
 
 

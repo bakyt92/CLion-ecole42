@@ -10,15 +10,3 @@ char *ft_strchr(const char *s, int ch)
     }
     return((char *)s);
 }
-//
-//int main (void)
-//{
-//    char *p;
-//    p = strchr ("abcdfeg", 't');
-//    printf("%s \t", p);
-//    printf("\n");
-//    printf("\n");
-//    printf("%s \t", ft_strchr("abcdfeg", 't'));
-//    printf("\n");
-//    return (0);
-//}
