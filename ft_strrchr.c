@@ -3,14 +3,15 @@
 char *ft_strrchr(const char *s, int c)
 {
 	char *str;
-	int i;
 
-	i = 0;
-	while (s[i])
+	str = (void *)0;
+	while (*s)
 	{
-		if (*s == c)
-			str = (char*) s + i;
-		i++;
+		if (*s == (unsigned char)c)
+			str = (char *)s;
+		s++;
 	}
-	return ((char *)s);
+	if (c == '\0')
+		return ((char *)s);
+	return (str);
 }

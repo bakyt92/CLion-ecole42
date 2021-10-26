@@ -1,9 +1,12 @@
 #include "libft.h"
 
-char *ft_strnstr(char *first, const char *find, size_t len)
+char *ft_strnstr(const char *first, const char *find, size_t len)
 {
     size_t i = 0;
     size_t j;
+
+    if (*find == 0)
+		return ((char *)first);
     while (first[i] != '\0' && i < len)
     {
         j = 0;
@@ -15,13 +18,3 @@ char *ft_strnstr(char *first, const char *find, size_t len)
     }
     return (NULL);
 }
-//
-//int main (void)
-//{
-//    size_t len;
-//    char s1[] = "asdfghjc453";;
-//    char s2[] = "df";
-//    len = 10;
-//    printf("Результат: %s", ft_strnstr(s1, s2, len));
-//    return(0);
-//}
