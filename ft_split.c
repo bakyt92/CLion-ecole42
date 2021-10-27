@@ -12,7 +12,6 @@ static char **ft_words_write(const char *s, char **arr, char c, int num_words)
 	int i;
 	int j;
 	int word_len;
-
 	j = 0;
 	i = 0;
 	while (j < num_words)
