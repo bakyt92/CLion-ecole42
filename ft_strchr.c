@@ -2,7 +2,7 @@
 
 char *ft_strchr(const char *s, int ch)
 {
-    while (*s != ch)
+    while (*s != (unsigned char)ch)
     {
         if (*s == '\0')
             return (NULL);
