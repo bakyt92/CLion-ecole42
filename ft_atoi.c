@@ -1,3 +1,5 @@
+
+
 #include "libft.h"
 
 static int ft_subatoi (const char *str, int i, int znak)
