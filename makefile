@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    MakeFile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: ufitzhug <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/10 15:48:42 by ufitzhug          #+#    #+#              #
-#    Updated: 2021/10/24 22:46:30 by ufitzhug         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
 
 SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_memset.c ft_strlen.c \
@@ -49,7 +37,7 @@ bonus : $(B_OBJ) $(HEADER)
 clean : 
 	@rm -f $(OBJ) $(B_OBJ)
 
-fclean :
+fclean : clean
 	@$(RM) $(NAME)
 
 re : fclean all
