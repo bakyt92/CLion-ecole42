@@ -6,7 +6,7 @@
 /*   By: ufitzhug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 00:29:32 by ufitzhug          #+#    #+#             */
-/*   Updated: 2021/10/28 00:29:33 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2021/10/28 00:57:06 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int ft_toupper (int ch)
 {
     if (ch >= 'a' && ch <= 'z')
-       return (ch-32);
+        return (ch-32);
     return (ch);
 }

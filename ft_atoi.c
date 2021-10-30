@@ -6,17 +6,17 @@
 /*   By: ufitzhug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 00:26:05 by ufitzhug          #+#    #+#             */
-/*   Updated: 2021/10/28 00:26:10 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2021/10/28 00:39:05 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_subatoi (const char *str, int i, int znak)
+static int ft_subatoi(const char *str, int i, int znak)
 {
-	int res;
-	int star_res;
-	int counter;
+	int	res;
+	int	star_res;
+	int	counter;
 
 	res = 0;
 	counter = 0;
@@ -33,18 +33,19 @@ static int ft_subatoi (const char *str, int i, int znak)
 		}
 		++i;
 	}
-	return(res);
+	return (res);
 }
 
 int ft_atoi(const char *str)
 {
-	int i;
-	int res;
-	int znak;
+	int	i;
+	int	res;
+	int	znak;
 
 	i = 0;
 	znak = 1;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || 
+		str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
 		++i;
 	if (str[i] == '+' || str[i] == '-')
 	{
