@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ufitzhug <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ufitzhug <ufitzhug@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 00:26:05 by ufitzhug          #+#    #+#             */
-/*   Updated: 2021/10/28 00:39:05 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2021/10/30 23:20:21 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_subatoi(const char *str, int i, int znak)
+static int	ft_subatoi(const char *str, int i, int znak)
 {
 	int	res;
 	int	star_res;
@@ -36,7 +36,7 @@ static int ft_subatoi(const char *str, int i, int znak)
 	return (res);
 }
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	res;
@@ -44,7 +44,7 @@ int ft_atoi(const char *str)
 
 	i = 0;
 	znak = 1;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || 
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || \
 		str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
 		++i;
 	if (str[i] == '+' || str[i] == '-')

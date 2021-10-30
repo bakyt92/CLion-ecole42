@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ufitzhug <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ufitzhug <ufitzhug@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 19:06:48 by ufitzhug          #+#    #+#             */
-/*   Updated: 2021/10/10 19:18:03 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2021/10/30 23:25:35 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,3 @@ int	ft_isascii(int ch)
 		return (1);
 	return (0);
 }
-

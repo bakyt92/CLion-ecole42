@@ -3,43 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ufitzhug <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ufitzhug <ufitzhug@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 00:29:50 by ufitzhug          #+#    #+#             */
-/*   Updated: 2021/10/28 00:29:51 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2021/10/30 23:59:08 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static int ft_begin(char const *s1, char const *set)
+static int	ft_begin(char const *s1, char const *set)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
-
 	while (s1[i])
 	{
 		j = 0;
 		while (s1[i] != set[j])
 		{
 			if (set[j] == '\0')
-			{
 				return (i);
-			}
-				j++;
+			j++;
 		}
 		i++;
 	}
 	return (-1);
 }
 
-static int ft_end(char const *s1, char const *set)
+static int	ft_end(char const *s1, char const *set)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	j = 0;
 	i = (int)ft_strlen(s1) - 1;
@@ -57,12 +53,12 @@ static int ft_end(char const *s1, char const *set)
 	return (-1);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int begin;
-	int end;
-	int i;
-	char *s_new;
+	int		begin;
+	int		end;
+	int		i;
+	char	*s_new;
 
 	if (!s1)
 		return (NULL);
@@ -84,5 +80,3 @@ char *ft_strtrim(char const *s1, char const *set)
 	s_new[end - begin + 1] = '\0';
 	return (s_new);
 }
-
-

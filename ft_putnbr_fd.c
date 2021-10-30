@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ufitzhug <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ufitzhug <ufitzhug@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 00:31:43 by ufitzhug          #+#    #+#             */
-/*   Updated: 2021/10/28 00:31:44 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2021/10/30 23:37:03 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char c;
+	char	c;
 
 	if (n == -2147483648)
 	{
@@ -27,7 +27,7 @@ void ft_putnbr_fd(int n, int fd)
 		n = n * -1;
 	}
 	if (n >= 10)
-		ft_putnbr_fd(n/10, fd);
-	c = n%10 + '0';
+		ft_putnbr_fd(n / 10, fd);
+	c = n % 10 + '0';
 	write (fd, &c, 1);
 }
