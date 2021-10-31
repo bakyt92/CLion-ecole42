@@ -8,33 +8,30 @@ ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 ft_toupper.c ft_tolower.c ft_strnstr.c ft_strlcat.c ft_strlcpy.c \
 ft_itoa.c ft_strrchr.c ft_strncmp.c ft_split.c
 
+B_SRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
+ft_lstiter_bonus.c ft_lstmap_bonus.c
 
-B_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-#
 HEADER = libft.h
 OBJ = $(patsubst %.c, %.o, $(SRC))
 B_OBJ = $(B_SRC:%.c=%.o)
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror -I$(HEADER)
-#
+
 .PHONY : all clean fclean re bonus
-#
+
 all : $(NAME)
-#
+
 $(NAME) : $(OBJ) $(HEADER)
 	ar rcs $(NAME) $?
-#
+
 %.o : %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-#bonus : 
-#	@make OBJ="$(B_OBJ)" all
- 
 bonus : $(B_OBJ) $(HEADER)
 	ar rcs $(NAME) $?
 
-clean : 
+clean :
 	@rm -f $(OBJ) $(B_OBJ)
 
 fclean : clean
